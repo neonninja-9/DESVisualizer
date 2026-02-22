@@ -1,13 +1,53 @@
-# DES Visualizer
+# DES Visualizer — Modern UI Edition ✨
 
-The application can be run by downloading the repository and visiting index.html within a web browser. The application is completely JavaScript and HTML based, so there is no backend communication with a server of any kind. The visualizer is capable of showing the encryption and decryption of a single block of data. The 64 bits of input data and the key can be specified as either an 8-character ASCII string or a 16-character Hexadecimal value on the page.
+![DES Visualizer Preview](./hero_screenshot.png) <!-- Update this with actual screenshot if available -->
 
-The interactive portion of the project uses HTML5 canvas, and was authored using Adobe Animate CC. The primary Animate source file (DES Visualizer.fla) can be found in the source folder, along with the HTML template that it exports with.
+An interactive, educational visualization tool for understanding the **Data Encryption Standard (DES)** algorithm. Watch the magic of symmetric-key encryption unfold step-by-step through 16 rounds of transformation.
 
-The project also uses a JavaScript implementation of DES that was custom built for this project. The implementation saves the pre and post state of every data transformation in every round into a hierarchical JavaScript object, an example of which can be found in the file at js/test_result.js. The interactive visualization can then display the data from this object.
+---
 
-The DES implementation follows the implementation found in the book *Network Security: Private Communication in a Public World* Second Edition by Kaufman, Perlman, and Speciner. Permutation mappings and S-Box tables can be found in the source of the DES implementation as they are found in the book with formatting preserved. The DES implementation also uses an open source BitArray library originally found at <https://github.com/bramstein/bit-array>, but was heavily modified by us to correct errors in its implementation and add additional features that were convenient for our purposes. Our full JavaScript DES implementation can be found in js/des.js, and the BitArray JavaScript class can be found in js/bit-array-typed.js.
+## 🎨 UI Transformation by Gourav
 
-To test for correctness, we used sample DES data available in the DES explanation at <http://page.math.tu-berlin.de/~kant/teaching/hess/krypto-ws2006/des.htm>. We have tested the steps of our implementation against the values at each step described in the sample, and created regression tests against these values. The regression testing script can be found in js/correctness_test.html. In addition to that, we have also ensured that our solution produces outputs identical to those of commercial implementations found online when given certain inputs. One such implementation was the [CryptoJS library](https://github.com/sytelus/CryptoJS), which is why it can be found in the js folder (though note that it's not actually used in our solution, it's just used to test against).
+This repository features a **completely modernized User Interface** built by [Gourav](https://github.com/gourav). 
 
-We hope that our project presents a vast improvement over existing DES visualization solutions. Other existing solutions are not web-based and do not show complete examples, or they are simple animations with no interactivity and no way to specify custom inputs. Time constraints prevented us from adding several features we had originally hoped for, including animations, better display support for mobile devices, and better graphics. However, we still believe that this project will serve as a very useful resource for students learning about the inner workings of the DES algorithm and its strengths and weaknesses.
+### ✨ What's New in the UI?
+- **Dark Mode Aesthetic**: A deep navy/black theme with ambient glowing accents.
+- **Glassmorphism Design**: Frosted glass input cards utilizing `-webkit-backdrop-filter`.
+- **Premium Visualization Canvas**: The original white canvas has been seamlessly inverted to a sleek black background with neon blue and purple glowing borders.
+- **Educational Theory Section**: Added a comprehensive "Understanding DES" section breaking down the Feistel Network, S-Boxes, Encryption Rounds, and Key Schedules.
+- **Responsive Layout**: Works beautifully across different screen sizes.
+
+---
+
+## 🛠️ Original Project & Core Logic
+
+> **Note:** I (Gourav) have built the UI layer over the core DES implementation and canvas logic.
+
+The original codebase, including the JavaScript DES implementation and Adobe Animate CC canvas visualization, was created by **Brant Nielsen**.
+- **Original Repository:** [BrantNielsen/DESVisualizer](https://github.com/BrantNielsen/DESVisualizer)
+
+### From the Original Authors:
+> The application can be run by downloading the repository and visiting `index.html` within a web browser. The application is completely JavaScript and HTML based, so there is no backend communication with a server of any kind. The visualizer is capable of showing the encryption and decryption of a single block of data. The 64 bits of input data and the key can be specified as either an 8-character ASCII string or a 16-character Hexadecimal value on the page.
+>
+> The interactive portion of the project uses HTML5 canvas, and was authored using Adobe Animate CC. The primary Animate source file (DES Visualizer.fla) can be found in the source folder, along with the HTML template that it exports with.
+>
+> The DES implementation follows the implementation found in the book *Network Security: Private Communication in a Public World* Second Edition by Kaufman, Perlman, and Speciner.
+
+---
+
+## 🚀 How to Use
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/neonninja-9/DESVisualizer.git
+   cd DESVisualizer
+   ```
+2. **Open the app:** simply double-click on `index.html` in your web browser.
+3. **Enter Data:** Type up to 8 ASCII characters (or 16 Hex) for both your Plaintext and Key. Or just click the **"Random"** buttons!
+4. **Encrypt:** Click the glowing `⚡ Encrypt` button and watch the visualization play out on the dark canvas.
+
+---
+
+### Credit & Acknowledgment
+- **Core Algorithm & Canvas Logic**: [BrantNielsen/DESVisualizer](https://github.com/BrantNielsen/DESVisualizer)
+- **Modern UI Redesign & Styling**: Gourav
