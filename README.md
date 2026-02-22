@@ -1,6 +1,6 @@
 # DES Visualizer — Modern UI Edition ✨
 
-![DES Visualizer Preview](./hero_screenshot.png) <!-- Update this with actual screenshot if available -->
+![DES Visualizer Preview](./hero_screenshot.png)
 
 An interactive, educational visualization tool for understanding the **Data Encryption Standard (DES)** algorithm. Watch the magic of symmetric-key encryption unfold step-by-step through 16 rounds of transformation.
 
