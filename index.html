@@ -28,6 +28,8 @@
     <script src="js/bit-array-typed.js"></script>
     <script src="js/des.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/application.js"></script>
     <style>
@@ -179,7 +181,12 @@
     </script>
     <!-- write your code here -->
     <script type="text/javascript">
-        $(document).ready(init);
+        $(document).ready(function () {
+            init();
+            $(".canvas-wrapper").resizable({
+                handles: "n, e, s, w, ne, se, sw, nw"
+            });
+        });
     </script>
     <link href="css/application.css" rel="stylesheet">
 </head>

@@ -456,8 +456,6 @@ h1 {
 
 .canvas-wrapper {
   border-radius: var(--radius-lg);
-  overflow: auto;
-  resize: both;
   min-width: 300px;
   min-height: 200px;
   /* Glowing gradient border effect */
@@ -470,11 +468,16 @@ h1 {
     0 0 80px rgba(79, 125, 245, 0.15),
     0 0 40px rgba(139, 92, 246, 0.1),
     0 20px 60px rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 16px;
   position: relative;
+}
+
+/* Make jQuery UI Resize Handles invisible but clickable over the dark theme */
+.ui-resizable-handle {
+  z-index: 999 !important;
 }
 
 /* Corner accent dots */
