@@ -456,7 +456,10 @@ h1 {
 
 .canvas-wrapper {
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: auto;
+  resize: both;
+  min-width: 300px;
+  min-height: 200px;
   /* Glowing gradient border effect */
   border: 2px solid transparent;
   background:
